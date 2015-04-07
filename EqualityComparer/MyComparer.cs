@@ -14,8 +14,8 @@ namespace EqualityComparer
 			{
 				throw new ArgumentException("Porównywane obiekty są różne");
 			}
-			PropertyInfo[] xSourcePropertyInfos = sourceType.GetProperties();
-			foreach (PropertyInfo info in xSourcePropertyInfos)
+			PropertyInfo[] sourcePropertyInfos = sourceType.GetProperties();
+			foreach (PropertyInfo info in sourcePropertyInfos)
 			{
 				//if (sourceType.GetProperty(info.Name).GetValue(this, null) == null && destinationType.GetProperty(info.Name).GetValue(this, null) == null)
 				if (sourceType.GetProperty(info.Name).GetValue(source, null) == null && destinationType.GetProperty(info.Name).GetValue(destination, null) == null)
